@@ -20,7 +20,7 @@ type Qmessage struct {
 	ReceiptHandle *string
 }
 
-func New(region string, url string) *Queue {
+func NewQ(region string, url string) *Queue {
 	return &Queue{
 		region: &region,
 		url:    &url,
