@@ -34,7 +34,7 @@ func newSvc(region *string) *sqs.SQS {
 }
 
 func (q *Queue) newSendMessage(msg string) *sqs.SendMessageInput {
-	u, _ := uuid.NewV4()
+	u := uuid.NewV4()
 	return &sqs.SendMessageInput{
 		DelaySeconds:           aws.Int64(0),
 		MessageGroupId:         aws.String("GroupId"),
